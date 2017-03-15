@@ -1,25 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stock Prediction Service</title>
+  <script src="test-1/test-1.js"></script>
+</head>
 
-  <head>
-    <title>NodeJS Starter Application</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylesheets/style.css">
-  </head>
 
-  <body>
-    <table>
-      <tr>
-        <td style= "width:30%;">
-          <img class = "newappIcon" src="images/newapp-icon.png">
-        </td>
-        <td>
-          <h1 id="message">Stock Market prediction service.</h1>
-        </td>
-      </tr>
-    </table>
-  </body>
+<body>
 
+<div style="text-align: left; margin: 50px">
+  <h1> Stock Prediction Service</h1>
+  <br>
+  <h3> Select an option and then a stock.</h3>
+  <br><br>
+
+  Time Period:
+  <br>
+  <input type="radio" name="time" value="day" onClick="setTime()" checked> Day <br>
+  <input type="radio" name="time" value="month" onClick="setTime()"> Week <br>
+  <input type="radio" name="time" value="year" onClick="setTime()"> Year <br>
+
+  <br>
+  Stock Name:
+  <select id="companyList" name="company">
+    <option name="Nike">Nike</option>
+    <option name="Pfizer">Pfizer</option>
+    <option name="Nokia">Nokia</option>
+    <option name="Halliburton">Halliburton</option>
+    <option name="Barclays">Barclays</option>
+    <option name="DeltaAirlines">DeltaAirlines</option>
+    <option name="Novartis">Novartis</option>
+    <option name="Facebook">Facebook</option>
+    <option name="Apple">Apple</option>
+    <option name="Google">Google</option>
+  </select>
+
+  <button id='selectCompany' onClick="predictStock()">Predict Stock</button>
+  <br>
+
+  <br><br>
+  <div id="prediction"></div>
+</div>
+
+
+<script src="predictionService.js"></script>
+
+<script src="test-data.js"></script>
+</body>
 </html>
