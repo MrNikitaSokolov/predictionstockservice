@@ -68,11 +68,12 @@ function predictStock(){
     if (prediction < 0)
         prediction = 0;
 
-    //round the number
+    //round the numbers
+    lastValue = Math.round(lastValue * 100) / 100;
     prediction = Math.round(prediction * 100) / 100;
 
     //call function to update the prediction value
-    updatePrediction(prediction);
+    updatePrediction(prediction, lastValue);
 }
 
 function findMedian(){
@@ -93,11 +94,14 @@ function findMedian(){
 
 }
 
-function updatePrediction(prediction){
+function updatePrediction(prediction, current){
     document.getElementById('prediction').innerHTML = "Projected Stock Value: $" + prediction;
+    document.getElementById('current').innerHTML = "Current Stock Value: $" + current;
 }
 
 function clearPrediction(){
     document.getElementById('prediction').innerHTML = "Projected Stock Value: n/a"
+    document.getElementById('current').innerHTML = "Current Stock Value: n/a"
     predictClicked = false;
 }
+
