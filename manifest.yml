@@ -6,3 +6,4 @@ applications:
   name: predictionstockservice
   host: predictionstockservice
   disk_quota: 1024M
+  command: node app.js
