@@ -18,10 +18,6 @@ var rp = require('request-promise');
 // create a new express server
 var app = express();
 
-// use hbs as the view template
-app.set('view engine', 'html');
-app.engine('html', require('hbs').__express);
-
 // serve the files out of ./public as our main files
 app.use(express.static(__dirname + '/public'));
 
