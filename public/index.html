@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="stylesheets/style.css">
 
     <script src="js/jquery.min.js"></script>
+    <script src="function.js"></script>
 
     <script src="js/predictionService.js"></script>
-    <script src="js/test-data.js"></script>
 
-    <script src="function.js"></script>
+    <!--
+    <script src="js/test-data.js"></script>
+    -->
 
 </head>
 
@@ -20,35 +22,36 @@
 
 <div style="text-align: left; margin: 50px">
     <h1> Stock Prediction Service</h1>
-    <br>
     <h3> Select an option and then a stock.</h3>
-    <br><br>
+    <br>
 
     Time Period:
     <br>
-    <input type="radio" name="time" value="day" onClick="setTime()" checked> Day <br>
-    <input type="radio" name="time" value="month" onClick="setTime()"> Week <br>
-    <input type="radio" name="time" value="year" onClick="setTime()"> Year <br>
+    <input type="radio" name="time" value="day" onClick="setTime()" style="margin-left: 40px; margin-top: 10px;" checked> Day <br>
+    <input type="radio" name="time" value="month" onClick="setTime()" style="margin-left: 40px;"> Week <br>
+    <input type="radio" name="time" value="year" onClick="setTime()" style="margin-left: 40px;"> Year <br>
 
     <br>
     Stock Name:
-    <!--
-    <select id="companyList" name="company">
-    <option name="Nike">Nike</option>
-    <option name="Pfizer">Pfizer</option>
-    <option name="Nokia">Nokia</option>
-    <option name="Halliburton">Halliburton</option>
-    <option name="Barclays">Barclays</option>
-    <option name="DeltaAirlines">DeltaAirlines</option>
-    <option name="Novartis">Novartis</option>
-    <option name="Facebook">Facebook</option>
-    <option name="Apple">Apple</option>
-    <option name="Google">Google</option>
+
+    <select id="companyList" name="company" onClick="clearPrediction()">
+        <option value="1" selected="selected">Nike</option>
+        <option value="2">Pfizer</option>
+        <option value="3">Nokia</option>
+        <option value="4">Halliburton</option>
+        <option value="5">Barclays</option>
+        <option value="6">Delta Airlines</option>
+        <option value="7">Novartis</option>
+        <option value="8">Facebook</option>
+        <option value="9">Apple</option>
+        <option value="10">Google</option>
     </select>
 
-    <button id='selectCompany' onClick="predictStock()">Predict Stock</button>
-    <br> -->
+    <button id='selectCompany' onClick="loadData()">Predict Stock</button>
+    <br>
 
+
+    <!--
     <div>
         <select id="company-list" name="company">
             {{#each companyList}}
@@ -57,9 +60,10 @@
         </select>
         <button id='select-company' type="submit">Get Data</button>
     </div>
+    -->
 
     <br><br>
-    <div id="prediction"></div>
+    <div id="prediction">Projected Stock Value: n/a</div>
 </div>
 
 </body>
