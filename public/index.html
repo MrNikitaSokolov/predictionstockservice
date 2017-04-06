@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Stock Prediction Service</title>
-  <script src="test-1/test-1.js"></script>
+    <meta charset="UTF-8">
+    <title>Stock Prediction Service</title>
+    <script src="function.js"></script>
 </head>
 
 
 <body>
 
 <div style="text-align: left; margin: 50px">
-  <h1> Stock Prediction Service</h1>
-  <br>
-  <h3> Select an option and then a stock.</h3>
-  <br><br>
+    <h1> Stock Prediction Service</h1>
+    <br>
+    <h3> Select an option and then a stock.</h3>
+    <br><br>
 
-  Time Period:
-  <br>
-  <input type="radio" name="time" value="day" onClick="setTime()" checked> Day <br>
-  <input type="radio" name="time" value="month" onClick="setTime()"> Week <br>
-  <input type="radio" name="time" value="year" onClick="setTime()"> Year <br>
+    Time Period:
+    <br>
+    <input type="radio" name="time" value="day" onClick="setTime()" checked> Day <br>
+    <input type="radio" name="time" value="month" onClick="setTime()"> Week <br>
+    <input type="radio" name="time" value="year" onClick="setTime()"> Year <br>
 
-  <br>
+    <br>
   Stock Name:
-  <select id="companyList" name="company">
+    <!--
+    <select id="companyList" name="company">
     <option name="Nike">Nike</option>
     <option name="Pfizer">Pfizer</option>
     <option name="Nokia">Nokia</option>
@@ -34,13 +35,19 @@
     <option name="Facebook">Facebook</option>
     <option name="Apple">Apple</option>
     <option name="Google">Google</option>
-  </select>
+    </select>
 
-  <button id='selectCompany' onClick="predictStock()">Predict Stock</button>
-  <br>
+    <button id='selectCompany' onClick="predictStock()">Predict Stock</button>
+    <br> -->
+    <select id="company-list" name="company">
+        {{#each companyList}}
+        <option name="{{this}}">{{this}}</option>
+        {{/each}}
+    </select>
+    <button id='select-company' type="submit">Get Data</button>
 
-  <br><br>
-  <div id="prediction"></div>
+    <br><br>
+    <div id="prediction"></div>
 </div>
 
 
