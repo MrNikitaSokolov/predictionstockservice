@@ -1,13 +1,17 @@
 {
-	"name": "NodejsStarterApp",
+	"name": "StockPredictionService",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"start": "node app.js"
+		"start": "node app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
+		"cfenv": "1.0.x",
 		"express": "4.13.x",
-		"cfenv": "1.0.x"
+		"hbs": "^4.0.1",
+		"request": "^2.81.0",
+		"request-promise": "^4.1.1"
 	},
 	"repository": {},
 	"engines": {
