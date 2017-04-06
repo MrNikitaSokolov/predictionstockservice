@@ -14,5 +14,10 @@ body,html {
 h1 {
 	font-weight: bold;
 	font-size: 2em;
-	color: #ccefff;
+	color: #99ddff;
+}
+
+.radios{
+	margin-left: 40px;
+	color: #bbbbbb;
 }
