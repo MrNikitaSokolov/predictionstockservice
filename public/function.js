@@ -4,7 +4,7 @@ $(function(){
         var company = $('#company-list').find(":selected").text();
 
         $.get('/getdata/' + company, function(dataset){
-            Highcharts.stockChart('chart-container', {
+            /*Highcharts.stockChart('chart-container', {
                 rangeSelector: {
                     selected: 1
                 },
@@ -18,7 +18,7 @@ $(function(){
                         valueDecimals: 2
                     }
                 }]
-            });
+            }); */
         }); //end of getdata
 
     });//end of select-company.click

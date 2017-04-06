@@ -41,3 +41,5 @@ node_modules
 # Project related files #
 *.idea/*
 *.idea\*
+.idea/workspace.xml
+.idea/workspace.xml
