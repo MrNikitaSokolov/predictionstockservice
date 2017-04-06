@@ -27,9 +27,11 @@
 
     Time Period:
     <br>
-    <input type="radio" name="time" value="day" onClick="setTime()" style="margin-left: 40px; margin-top: 10px;" checked> Day <br>
-    <input type="radio" name="time" value="month" onClick="setTime()" style="margin-left: 40px;"> Week <br>
-    <input type="radio" name="time" value="year" onClick="setTime()" style="margin-left: 40px;"> Year <br>
+    <div class="radios">
+        <input type="radio" name="time" value="day" onClick="setTime()" style="margin-top: 10px;" checked> Day <br>
+        <input type="radio" name="time" value="month" onClick="setTime()"> Week <br>
+        <input type="radio" name="time" value="year" onClick="setTime()"> Year <br>
+    </div>
 
     <br>
     Stock Name:
@@ -63,8 +65,8 @@
     -->
 
     <br><br>
-    <div id="current">Current Stock Value: n/a</div>
-    <div id="prediction">Projected Stock Value: n/a</div>
+    <div id="current" style="color:#b3e6ff;">Current Stock Value: n/a</div>
+    <div id="prediction" style="color:#b3e6ff;">Projected Stock Value: n/a</div>
 </div>
 
 </body>
